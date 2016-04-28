@@ -1,0 +1,57 @@
+<!-- <script src="../../static/jquery-1.11.1.min.js"></script>
+<script src="../../static/jquery.cookie.js"></script>
+<script src="../../static/home.js"></script>
+<script src="../../static/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../../static/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="../../static/home.css" type="text/css" /> -->
+
+<!-- <html lang="en">
+<head> -->
+  <title>Could Your Data Discriminate?</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
+</head> -->
+<body>
+  
+<div class="container">
+  <h1>Could Your Data Discriminate?</h1>
+  <div id="background-content">
+        <p>Even as explicit discrimination decreases, implicit discrimination remains widespread. It exists in the form of laws or policies that are seemingly color- or gender-blind, but in practice discriminate—often unintentionally—against women or minorities. The emergence of data-driven decision making, predictive analytics, and machine-learning algorithms have automated these discriminatory decision making patterns, thereby introducing new concerns regarding data’s potential discriminatory effects.</p><br>
+        <p>To determine if your data could be used to make discriminatory decisions, upload it here!  Save your data as a .csv (Comma Separated Values) file. The first row of information should contain the names of data columns. After the first row, there should neither be any blank entries, nor entries after the last column. Please see <a href="/media/ExampleFile.csv">this file</a> or the image below for an example of the formatting our tool expects.</p><br><br><center><img src="/media/screenshot.png" /></center><br><br>
+<center>        <p>After you upload your data, we'll ask you a few questions about your data so that we can tell you how fair decisions resulting from it will be.</p></center>
+  </div>
+
+  <div style="padding: 20" align="center">
+        <form class="form-inline" role="form" enctype="multipart/form-data">
+             <!--{% csrf_token %}-->
+             <div class="form-group">
+                 <input id="file" type="file" name="file"/>
+             </div>
+             <div class="form-group">
+                 <input class="form-control" type="button" value="Upload" onclick="home.upload_file()"/>
+             </div>
+        </form>
+
+        <div id="col-typing" style="display: none"></div>
+        <div id="download"></div>
+        <br><br>
+        <div id="current-heading">
+            <h2 id="current-fairness"></h2>
+            <h4 id="current-percentage"></h4>
+        </div>
+        <div id="current-graph" align="center"></div>
+        <div id="graph-heading">
+            <h2 id="overall-fairness"></h2>
+            <h4 id="percentage"></h4>
+        </div>
+        <div id="total-graph" align="center"></div>
+        <h2 id="scores-by-category"></h2>
+        <div id="category-graph" align="center"></div>
+  </div>
+</div>
+
+</body>
+</html>

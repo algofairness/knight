@@ -1,0 +1,57 @@
+body {
+    background-color: #F3F3F3;
+}
+
+.jumbotron {
+    background-color: #F3F3F3;
+    text-align: center;
+}
+
+.content {
+    padding: 0px 100px;
+}
+
+.submit {
+    /* padding: 0px 600px; */
+    height: auto;
+    padding: 0px 550px;
+}
+
+h1, h2 {
+    font-family: 'Sintony', sans-serif;
+    font-weight: 700;
+    padding: 10px 100px;
+    color: #003C83;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 2.7em;
+}
+
+a {
+    color: #00b0ff;
+}
+
+p {
+    font-family: 'Sintony', sans-serif;
+    font-size: 1.3em;
+    font-weight: 400;
+    padding: 0px 100px;
+    text-align: inline;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.center {
+    text-align: center;
+}
