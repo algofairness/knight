@@ -11,7 +11,7 @@ home.upload_file = function() {
 
     $.ajax({
         type: "POST",
-        url: "/fairdata/accept_file/",
+        url: "/knight/accept_file/",
         dataType: "json",
         data: fd,
         headers: {"X-CSRFToken": csrftoken},
@@ -192,7 +192,7 @@ home.run = function() {
     // runs main.py
     $.ajax({
         type: "GET",
-        url: "/fairdata/run_script/",
+        url: "/knight/run_script/",
 	data: {in_path: input_csv,
 		protect: protect,
 		protected_pos: protected_positive,
