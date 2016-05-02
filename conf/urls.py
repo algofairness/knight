@@ -18,8 +18,8 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^repair_tool/$', 'knightapp.views.home'),
-    url(r'^accept_file/', 'knightapp.views.accept_file'),
-    url(r'^run_script/', 'knightapp.views.run_script'),
+    url(r'^knight/accept_file/$', 'knightapp.views.accept_file'),
+    url(r'^knight/run_script/$', 'knightapp.views.run_script'),
 )
 
 if settings.DEBUG:
