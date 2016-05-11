@@ -4,6 +4,7 @@ home.upload_file = function() {
     var file = $("#file").get(0).files[0];
     var fd = new FormData();
     fd.append("file", file);
+    console.log(file);
     
     var csrftoken = $.cookie('csrftoken');
 
@@ -11,7 +12,7 @@ home.upload_file = function() {
 
     $.ajax({
         type: "POST",
-        url: "accept_file/",
+        url: "/knight/accept_file",
         dataType: "json",
         data: fd,
         headers: {"X-CSRFToken": csrftoken},
@@ -61,8 +62,10 @@ home.upload_file = function() {
             $("#col-typing").fadeIn();     
         },
         error: function(jqXHR, textStatus, errorThrown) {
-            console.log(jqXHR);
-         alert("Failed to upload file.");
+            console.log(textStatus);
+	    console.log(fd);
+	    console.log(errorThrown);
+            alert("Failed to upload file.");
         }
     });
 }

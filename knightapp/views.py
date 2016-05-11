@@ -9,7 +9,7 @@ from django.conf import settings
 from django.core.files import File
 from django.core.servers.basehttp import FileWrapper
 
-from fairdata.models import Uploaded_File
+from knight.models import Uploaded_File
 import json, csv, time, string, random, sys, subprocess, os, re
 import datetime
 
@@ -29,7 +29,7 @@ def accept_file(request):
     new_uploaded_file.save()
     request.FILES["file"].seek(0) # 'Rewind' the file so it can be read in the next section
 
-    file_path = "/home/fair/web/fairness.haverford.edu/live_site/knight" + new_uploaded_file.uploaded_file.url.replace("%20", " ")
+    file_path = "/home/fair/web/fairness.haverford.edu/live_site/knight/media/" + new_uploaded_file.uploaded_file.url.replace("%20", " ")
     file_reader = csv.reader(open(file_path, 'rU'), delimiter=',')
 
     rows = []
